@@ -1,6 +1,7 @@
 //jshint esversion:6
 
 //Require all the modules installed:
+require('dotenv').config();
 const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
@@ -29,8 +30,7 @@ const userScehma = new mongoose.Schema({
 });
 
 // Add middleware for hashing passwords:
-const secret = "Thisisourlittlesecret"
-userScehma.plugin(encrypt, { secret: secret , encryptedFields: ["password"] });
+userScehma.plugin(encrypt, { secret: process.env.SECRET , encryptedFields: ["password"] });
 
 // Use the above schema to set up a new user Model
 // The inside User is the collection name

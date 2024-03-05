@@ -9,6 +9,3 @@ their hands on the encryption secret word, they will be able to decrypt all the 
 website using the same plugins used to encrypt the passwords.
 
 Taha Ahmed
-Taha Ahmed
-Taha Ahmed
-Taha Ahmed
